@@ -202,8 +202,7 @@ Implement these yourself in the study Xcode project. Use `studyTests/` for isola
 
 The implementations for experiments 1 and 2 are in
 [ValueSemanticsTest.swift](../../../../studyTests/ValueSemanticsTest.swift).
-This link identifies the demonstration code; it does not establish that every
-exercise step is complete or that the tests have passed.
+This link identifies the demonstration code; it does not establish that every exercise step is complete or that the tests have passed.
 
 1. **Independent values:** Define a small struct, assign it to two variables, and mutate one. Assert that the original remains unchanged. Repeat with a function that changes a local copy.
 2. **Shared references:** Repeat using a class. Assert that mutation is visible through both references and that `first === second` is true. Compare with a newly initialized instance.
