@@ -107,6 +107,13 @@ implementing every requested feature.
   consulted sources, and meaningful experiment references as knowledge evolves;
   update navigation when notes are added, moved, renamed, or split.
 
+### Experiment Evaluation
+
+Use the `evaluate-experiment` skill when reviewing user-created learning
+experiments or exploratory tests. Evaluation is read-only by default; explain
+findings rather than fixing them. Ordinary production-code reviews are outside
+this skill's scope.
+
 ### Default Workflow
 
 For non-trivial changes:
