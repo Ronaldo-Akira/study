@@ -44,6 +44,69 @@ This repository is primarily a learning project. Codex should help the
 developer understand and implement solutions rather than automatically
 implementing every requested feature.
 
+### Knowledge Base Maintenance
+
+- Treat `docs/Learning/` as the canonical, evolving knowledge base/wiki.
+  Roadmaps are learning plans; a listed topic does not imply that a knowledge
+  note should exist. Create knowledge pages as topics are actually studied.
+- Search existing notes and relevant sections before adding knowledge. Explicitly
+  prefer improving and extending existing notes over creating new files.
+- Keep closely related concepts together when pedagogically useful. Give a
+  concept its own page only when its depth, independent reuse, or navigation
+  value justifies it; reorganize gradually as the repository grows.
+- Present the core idea concisely before deeper explanations, examples, and
+  experiments. A particular heading or one-line-summary format is not required.
+- Connect related concepts with Obsidian links, using explicit paths or section
+  links where helpful. Avoid duplicating explanations; link to their canonical
+  location and replace duplicated detail with links when extracting a concept.
+- Keep executable experiments in `studyTests/` or application code. Notes may
+  include small explanatory snippets and links to demonstrations. Distinguish
+  planned exercises from observed results; do not claim tests passed without
+  validation evidence.
+- Maintain `docs/Home.md` as the navigation index when adding, moving, or
+  splitting notes. Use descriptive titles and headings for human and agent
+  retrieval, cite sources when used, and preserve learning intent and Git history
+  as explanations evolve.
+- Keep Requirements, Specifications, Architecture, and Decisions focused on the
+  Study application. `AGENTS.md` and future Skills contain agent instructions.
+
+### Knowledge Note Frontmatter
+
+- Apply YAML frontmatter only to canonical knowledge notes under
+  `docs/Learning/`, excluding roadmaps. Do not automatically apply it to
+  Requirements, Specifications, Architecture documents, Decisions, executable
+  experiments, source code, `AGENTS.md`, or Skills.
+- The schema is `title`, `area`, `type`, `status`, `tags`, `related`, `sources`,
+  `experiments`, `created`, and `updated`. Normally match `title` to the main
+  heading and use a broad knowledge domain for `area`.
+- Start with types `concept`, `technology`, `pattern`, and `architecture`;
+  add types only for demonstrated needs. Use statuses `draft` (new/incomplete),
+  `learning` (actively studied), `studied` (reasonably consolidated), and
+  `review` (needs revisiting or validation), independently of roadmap inclusion.
+- Keep tags concise and intentional, using them for useful retrieval and
+  cross-cutting classification rather than repeating the title or primary area.
+- `related` should contain strong conceptual relationships useful for knowledge
+  navigation, not every concept mentioned or referenced by the note. Quote
+  Obsidian wiki links and prefer existing canonical titles. A relationship does
+  not require creating a page for the linked concept.
+- Record only external sources actually used to build or validate knowledge,
+  each with `title`, `type`, and `url`. Source types may include documentation,
+  book, article, paper, video, course, or repository; never invent provenance.
+- Use repository-relative paths for `experiments`. These are demonstrations,
+  not external sources; do not claim verified behavior without evidence of
+  successful execution. Empty collections are acceptable.
+- Keep `created` and `updated` in the schema and use YYYY-MM-DD when reliable
+  dates are available. Inspect Git history for uncertain dates; during migration,
+  omit an unresolved date field rather than guessing or writing `null`.
+- Preserve `created` during normal updates. Change `updated` only for meaningful
+  knowledge changes, not formatting, navigation, typos, or metadata-only edits.
+- Frontmatter is metadata: keep explanations, summaries, examples, and key
+  points in the body. Do not add `summary`, `description`, `abstract`, or
+  `key_points` without demonstrated future need.
+- Search and extend existing knowledge first. Maintain strong relationships,
+  consulted sources, and meaningful experiment references as knowledge evolves;
+  update navigation when notes are added, moved, renamed, or split.
+
 ### Default Workflow
 
 For non-trivial changes:
