@@ -94,9 +94,79 @@ struct SharedReferenceTests{
         copy.value = 2
 
         //Then
-        #expect(originalScore.value == copy.value)
+        #expect(originalScore.value == 2)
         #expect(originalScore === copy)
     }
 
+    @Test("Changing a reference does not affect a new instance")
+    func changeReferenceDoesNotAffectNewInstance() {
+        // Given
+        let first = Score(value: 1)
+        let copy = first
+        let third = Score(value: 2)
+
+        //When
+        copy.value = 2
+
+
+        //Then
+        #expect(first.value == third.value)
+        #expect(first !== third)
+        #expect(third.value == 2)
+    }
+
 }
+
+
+// MARK: - Mutation rules experiment
+
+@Suite("Experiment 3: Mutation Rules")
+struct MutationRulesTests {
+
+    struct TestStructure {
+        var value: Int
+    }
+
+    private final class TestClass {
+        var value : Int
+
+        init(value: Int) {
+            self.value = value
+        }
+    }
+
+
+    @Test("Structs are value types and cannot be mutated if declared with let")
+    func structTypeMutationTest() {
+        var varStructure = TestStructure(value: 1)
+        varStructure.value = 2
+
+        #expect(varStructure.value == 2)
+        let letStructure = TestStructure(value: 1)
+        // letScore.value = 2 //Compilation error: cannot assign to a 'let' constant
+    }
+
+    @Test("Classes are reference types and can be mutated even if declared with let")
+    func referenceTypeMutationTest() {
+
+
+        var varClass = TestClass(value: 1)
+        varClass.value = 2
+        #expect(varClass.value == 2)
+
+        varClass = TestClass(value: 3)
+        #expect(varClass.value == 3)
+
+
+        let letClass = TestClass(value: 1)
+        letClass.value = 3 // This is valid because the variable holds a reference to an instance
+        // letClass = TestClass(value: 4) // Compilation error: cannot assign to a 'let' constant
+        #expect(letClass.value == 3)
+    }
+
+}
+
+
+// MARK: - Equality experiment
+
 

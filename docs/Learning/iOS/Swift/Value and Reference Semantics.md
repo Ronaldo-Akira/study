@@ -67,13 +67,13 @@ Passing a class instance to a function has the same sharing behavior. Assigning 
 
 ## Struct vs Class
 
-| Property | `struct` | `class` |
-| --- | --- | --- |
-| Assignment | Copies a value | Copies a reference to an instance |
-| Mutation | Changes that variable's value | Changes the shared instance |
-| Identity | No object identity | Supports identity with `===` |
-| Inheritance | Does not support type inheritance | Supports class inheritance |
-| Protocol conformance | Supported | Supported |
+| Property             | `struct`                          | `class`                           |
+| -------------------- | --------------------------------- | --------------------------------- |
+| Assignment           | Copies a value                    | Copies a reference to an instance |
+| Mutation             | Changes that variable's value     | Changes the shared instance       |
+| Identity             | No object identity                | Supports identity with `===`      |
+| Inheritance          | Does not support type inheritance | Supports class inheritance        |
+| Protocol conformance | Supported                         | Supported                         |
 
 Both can have properties, initializers, methods, and computed properties. Choose based on the behavior needed, rather than assuming structs always live on the stack or classes are always slower.
 
