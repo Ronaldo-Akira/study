@@ -1,6 +1,4 @@
 
-# iOS Learning Roadmap
-
 This is a learning plan. Knowledge notes emerge as topics are actually studied;
 listing a topic here does not require creating a page for it.
 
