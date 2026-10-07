@@ -26,9 +26,14 @@ To be developed after the initial iOS learning phase.
 
 ## Product
 
-These areas describe the Study application itself: Requirements captures needs
-and constraints, Specifications defines expected behavior, Architecture describes
-its structure, and Decisions records engineering choices and their rationale.
+These documents describe the Study application. Product documents describe its
+direction and evolution; requirements, specifications, architecture, and
+decisions capture progressively more concrete product and engineering detail.
+
+### Direction
+
+- [[docs/Product/Product Vision|Product Vision]]
+- [[docs/Product/Product Roadmap|Product Roadmap]]
 
 ### Requirements
 

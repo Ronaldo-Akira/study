@@ -70,6 +70,17 @@ implementing every requested feature.
 - Keep Requirements, Specifications, Architecture, and Decisions focused on the
   Study application. `AGENTS.md` and future Skills contain agent instructions.
 
+### Product Documentation
+
+- `docs/Product/` describes product vision and staged product evolution.
+  Keep it distinct from learning plans and detailed requirements.
+- `docs/Requirements/` defines what the Study app must do;
+  `docs/Specifications/` describes concrete expected behavior.
+- `docs/Architecture/` describes technical structure, and
+  `docs/Decisions/` records significant engineering choices and trade-offs.
+- Treat roadmap capabilities as planning direction, not approved requirements
+  or technical decisions.
+
 ### Knowledge Note Frontmatter
 
 - Apply YAML frontmatter only to canonical knowledge notes under
